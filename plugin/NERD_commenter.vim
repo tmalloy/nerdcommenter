@@ -1571,10 +1571,11 @@ endfunction
 function s:CanCommentLine(forceNested, lineNum)
     let theLine = getline(a:lineNum)
 
-    " make sure we don't comment lines that are just spaces or tabs or empty.
-    if theLine =~ "^[ \t]*$"
-        return 0
-    endif
+    " Make sure to comment the lines that are just spaces or tabs or empty
+"    " make sure we don't comment lines that are just spaces or tabs or empty.
+"    if theLine =~ "^[ \t]*$"
+"        return 0
+"    endif
 
     "if the line is part of a sexy comment then just flag it...
     if s:IsInSexyComment(a:lineNum)
